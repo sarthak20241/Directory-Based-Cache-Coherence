@@ -15,8 +15,11 @@ Core will be initialized with the constructor with the attributes core Id, L1 ca
 Cache_Controller is a nested class that contains the following methods for cache-related instructions:
 
 ● instrLS - executes LS instruction - initiates getShared() transaction
+
 ● instrLM - executes LM instruction - initiates getModified() and put() transactions
+
 ● instrIN - executes IN instruction - initiates put() transaction
+
 ● instrADD - executes ADD instruction - initiates getModified() and put() transactions
 
 This class handles the cache's working and cache coherence transactions in the quad-core architecture with directory-based coherence protocol. The cache controller interacts with the main memory and updates the cache based on the cache coherence protocol.
